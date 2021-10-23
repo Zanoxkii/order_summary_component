@@ -1,0 +1,134 @@
+@font-face {
+    font-family: redHatDisplay;
+    src: url("../../fonts/RedHatDisplay-VariableFont_wght.ttf");
+}
+
+:root {
+    --primary-pale-blue: hsl(225, 100%, 94%);
+    --primary-bright-blue: hsl(245, 75%, 52%);
+    --neutral-pale-blue: hsl(225, 100%, 98%);
+    --neutral-desaturated-blue: hsl(224, 23%, 55%);
+    --neutral-dark-blue: hsl(223, 47%, 23%);
+    --font: redHatDisplay;
+}
+
+body {
+    background: var(--primary-pale-blue) url("../../images/pattern-background-desktop.svg");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+    margin: 0;
+    height: 100vh;
+    border: 1px solid green;
+}
+
+h2, h3, p, a {
+    font-family: var(--font);
+}
+
+h2 {
+    font-weight: 900;
+    font-size: clamp(1.5rem, 1.5vw, 5rem);
+}
+
+h3 {
+    font-weight: 700;
+    line-height: 1rem;
+    font-size: clamp(1rem, 1vw, 2vw);
+}
+
+p {
+    font-size: clamp(12px, 1vw, 16px);
+    color: var(--neutral-desaturated-blue);
+}
+
+a > p {
+    color: var(--neutral-bright-blue);
+}
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    background-color: #fff;
+    width: 30vw;
+    min-width: 300px;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+}
+
+.card-header {
+    height: 40%;
+    border-radius: 20px 20px 0 0;
+    background-image: url("../../images/illustration-hero.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card-body {
+    height: 60%;
+    box-sizing: border-box;
+    padding: 1rem 3rem;
+}
+
+.card-body > h2, .card-body > p {
+    text-align: center;
+}
+
+.card-body > p {
+    padding: 0 1rem;
+}
+
+.plan {
+    display: flex;
+    align-items: center;
+    padding: 0.7rem 1.5rem;
+    border-radius: 10px;
+    background-color: var(--neutral-pale-blue);
+}
+
+.plan-body {
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.plan-body > p {
+    line-height: 0.2rem;
+    font-size: clamp(1rem, 1vw, 2vw);
+}
+
+.plan a {
+    margin-left: auto;
+}
+
+.payment-btn > * {
+    font-weight: 500;
+}
+
+.payment-btn > p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-bright-blue);
+    color: white;
+    height: 3rem;
+    border-radius: 10px;
+    box-shadow: 0 15px 20px var(--primary-pale-blue);
+}
+
+.payment-btn > a {
+    text-decoration: none;
+}
+
+.payment-btn > a > p {
+    text-align: center;
+    color: var(--neutral-desaturated-blue);
+    font-weight: 700;
+}
