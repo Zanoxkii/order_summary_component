@@ -1,6 +1,6 @@
 @font-face {
     font-family: redHatDisplay;
-    src: url("../../fonts/RedHatDisplay-VariableFont_wght.ttf");
+    src: url("../fonts/RedHatDisplay-VariableFont_wght.ttf");
 }
 
 :root {
@@ -14,7 +14,7 @@
 }
 
 body {
-    background: var(--primary-pale-blue) url("../../images/pattern-background-desktop.svg");
+    background: var(--primary-pale-blue) url("../images/pattern-background-desktop.svg");
     background-size: contain;
     background-position: top;
     background-repeat: no-repeat;
@@ -67,7 +67,7 @@ a > p {
 .card-header {
     height: 30%;
     border-radius: 20px 20px 0 0;
-    background-image: url("../../images/illustration-hero.svg");
+    background-image: url("../images/illustration-hero.svg");
     background-position: bottom;
     background-repeat: no-repeat;
     background-size: 100% 100%;
