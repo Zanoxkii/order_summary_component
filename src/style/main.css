@@ -9,6 +9,7 @@
     --neutral-pale-blue: hsl(225, 100%, 98%);
     --neutral-desaturated-blue: hsl(224, 23%, 55%);
     --neutral-dark-blue: hsl(223, 47%, 23%);
+    --neutral-hover-blue: #766cf1;
     --font: redHatDisplay;
 }
 
@@ -56,7 +57,7 @@ a > p {
 .card {
     background-color: #fff;
     width: 30vw;
-    min-width: 300px;
+    min-width: 350px;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -64,18 +65,24 @@ a > p {
 }
 
 .card-header {
-    height: 40%;
+    height: 30%;
     border-radius: 20px 20px 0 0;
     background-image: url("../../images/illustration-hero.svg");
-    background-position: center;
+    background-position: bottom;
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 .card-body {
-    height: 60%;
+    height: 70%;
     box-sizing: border-box;
     padding: 1rem 3rem;
+}
+
+@media (max-width: 1200px) {
+    .card-body {
+        padding: 1rem 2rem;
+    }
 }
 
 .card-body > h2, .card-body > p {
@@ -92,6 +99,7 @@ a > p {
     padding: 0.7rem 1.5rem;
     border-radius: 10px;
     background-color: var(--neutral-pale-blue);
+    margin-top: 2rem;
 }
 
 .plan-body {
@@ -99,13 +107,32 @@ a > p {
     margin-left: 1rem;
 }
 
+.music-icon {
+    width: max(3rem, 15%);
+}
+
+.plan-body > h3 {
+    font-size: clamp(12px, 1vw, 16px);
+}
+
 .plan-body > p {
     line-height: 0.2rem;
-    font-size: clamp(1rem, 1vw, 2vw);
 }
 
 .plan a {
     margin-left: auto;
+    font-weight: 700;
+}
+
+.plan a:hover {
+    color: var(--neutral-hover-blue);
+    text-decoration: none;
+}
+
+.payment-btn {
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .payment-btn > * {
@@ -120,15 +147,27 @@ a > p {
     color: white;
     height: 3rem;
     border-radius: 10px;
-    box-shadow: 0 15px 20px var(--primary-pale-blue);
+    box-shadow: 0 15px 20px var(--neutral-desaturated-blue);
+}
+
+.payment-btn > p:hover {
+    background-color: var(--neutral-hover-blue);
 }
 
 .payment-btn > a {
+    width: max-content;
     text-decoration: none;
+    align-self: center;
 }
 
 .payment-btn > a > p {
+    width: max-content;
     text-align: center;
     color: var(--neutral-desaturated-blue);
     font-weight: 700;
 }
+
+.payment-btn > a > p:hover {
+    color: black;
+}
+
