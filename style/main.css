@@ -59,6 +59,7 @@ a > p {
     width: 30vw;
     min-width: 350px;
     height: 90vh;
+    max-height: 650px;
     display: flex;
     flex-direction: column;
     border-radius: 20px;
